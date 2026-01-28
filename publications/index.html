@@ -1,92 +1,323 @@
-<!doctype html>
-<!--[if lt IE 7 ]> <html class="no-js ie6" dir="ltr" lang="en-US"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" dir="ltr" lang="en-US"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" dir="ltr" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" dir="ltr" lang="en-US"> <!--<![endif]-->
-
-<!-- Mirrored from localhost/wordpress/publications/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 31 May 2012 21:00:00 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script type="text/javascript">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - The Biodesign Lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-33052601-1']);
-  _gaq.push(['_trackPageview']);
+        :root {
+            --primary-blue: #0066cc;
+            --dark-blue: #003d99;
+            --light-blue: #e6f0ff;
+            --accent-blue: #0099ff;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+            --shadow-hover: 0 8px 24px rgba(0, 102, 204, 0.25);
+        }
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
 
-</script>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        /* Modern Navigation Bar */
+        nav {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
 
-<title>Publications &#124; Bennettlab</title>
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
 
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="../xmlrpc.php" />
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-<link href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
-<link rel="alternate" type="application/rss+xml" title="Bennettlab &raquo; Feed" href="../feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title="Bennettlab &raquo; Comments Feed" href="../comments/feed/index.html" />
-<link rel='stylesheet' id='responsive-style-css'  href='../wp-content/themes/responsive/style1576.css?ver=1.2.1' type='text/css' media='all' />
-<script type='text/javascript' src='../wp-includes/js/jquery/jquery4735.js?ver=1.7.1'></script>
-<script type='text/javascript' src='../wp-content/themes/responsive/js/responsive-modernizr91ee.js?ver=2.5.3'></script>
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
-<link rel='prev' title='Alumni' href='../people-2/alumni/index.html' />
-<link rel='next' title='Links' href='../links/index.html' />
-<meta name="generator" content="WordPress 3.3.2" />
-<link rel='canonical' href='index.html' />
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
 
-<!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Muli:light' rel='stylesheet' type='text/css' /><link href='http://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet' type='text/css' />
-<style type="text/css" media="screen">
-p 					{ font-family: 'Muli', arial, serif; } 
- h1 { font-family: 'Didact Gothic', arial, serif; } 
-h2 { font-family: 'Didact Gothic', arial, serif; } 
-h3 { font-family: 'Didact Gothic', arial, serif; } 
-h4 { font-family: 'Didact Gothic', arial, serif; } 
-h5 { font-family: 'Didact Gothic', arial, serif; } 
-h6 { font-family: 'Didact Gothic', arial, serif; } 
-body 				{ font-family: 'Didact Gothic', arial, serif; } 
-blockquote 	{ font-family: 'Didact Gothic', arial, serif; } 
-     
-</style>
-<!-- fonts delivered by Wordpress Google Fonts, a plugin by Adrian3.com -->
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+        }
 
-<!-- We need this for debugging -->
-<meta name="template" content="Responsive 1.5.0" />
-<style type="text/css">
-body.custom-background { background-color: #fff; }
-</style>
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-blue);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .header-section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+            color: var(--primary-blue);
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--light-blue);
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Team Member Styles */
+        .team-member {
+            background: linear-gradient(135deg, var(--light-blue) 0%, rgba(0, 153, 255, 0.05) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .team-member strong {
+            color: var(--primary-blue);
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .team-member p {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .team-section {
+            margin-bottom: 50px;
+        }
+
+        /* Button Styles */
+        button, .btn {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        button:hover, .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        button:active, .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 25px;
+            color: var(--text-light);
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--dark-blue);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            box-shadow: 0 -4px 12px rgba(0, 102, 204, 0.1);
+        }
+
+        footer p {
+            color: var(--white);
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                height: 60px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 40px 15px;
+            }
+
+            .team-member {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .nav-container {
+                padding: 0 10px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
-
-<body class="page page-id-150 page-template-default custom-background">
-                 
-<div id="container" class="hfeed">
-         
-        <div id="header">
-    
-       
-        
-       
-	               
-        <div id="logo">
-            <a href="../index.html"><img src="../wp-content/uploads/2012/05/cropped-Logo.jpg" width="300" height="100" alt="Bennettlab" /></a>
-        </div><!-- end of #logo -->
-        
-    
-    			    
-				<ul class="menu"><li class="current_page_item"><a href="../index.html" title="Home">Home</a></li><li class="page_item page-item-162"><a href="../news/index.html">News</a></li><li class="page_item page-item-67"><a href="../research/index.html">Research</a></li><li class="page_item page-item-79"><a href="../people-2/index.html">People</a></li><li class="page_item page-item-150"><a href="../publications/index.html">Publications</a></li><li class="page_item page-item-152"><a href="https://wiki.rice.edu/confluence/display/BIODESIGN/Home">Lab wiki</a></li></ul>
-                
-             
-    </div><!-- end of #header -->
+<body>
+    <!-- Modern Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-image">
+                    <img img src="../wp-content/uploads/2012/05/cropped-Logo.jpg" alt="Lab Logo">
+                </div>
+                <span><li><a href="../index.html">The Biodesign Lab</a><li></span>
+            </a>
+            <ul>
+                <li><a href="../index.html">Research</a></li>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="people-2/index.html">People</a></li>
+                <li><a href="publications/index.html">Publications</a></li>
+                <li><a href="https://wiki.rice.edu/confluence/display/BIODESIGN/Home">Lab wiki</a></li>
+            </ul>
+        </div>
+    </nav>
         
 	    <div id="wrapper" class="clearfix">
     
@@ -301,43 +532,10 @@ Bennett M, Schatz MF, Rockwood H & Wiesenfeld K, “Huygens’ clocks,” <em>Pr
         <!-- end of #widgets -->    </div><!-- end of #wrapper -->
     </div><!-- end of #container -->
 
-<div id="footer" class="clearfix">
-
-    <div id="footer-wrapper">
-    
-    <div class="grid col-940">
-    
-        <div class="grid col-620">
-		         </div><!-- end of col-620 -->
-         
-         <div class="grid col-300 fit">
-         <ul class="social-icons"></ul><!-- end of .social-icons -->         </div><!-- end of col-300 fit -->
-                
-        <div class="grid col-300 copyright">
-            &copy; 2012<a href="../../index.html" title="Bennettlab">
-                Bennettlab            </a>
-        </div><!-- end of .copyright -->
-        
-        <div class="grid col-300 scroll-top"><a href="#scroll-top" title="scroll to top">&uarr;</a></div>
-        
-        <div class="grid col-300 fit powered">
-            <a href="http://themeid.com/responsive-theme/" title="Responsive Theme">
-                    Responsive Theme</a>
-            powered by <a href="http://wordpress.org/" title="WordPress">
-                    WordPress</a><br/>
-			Designed and maintained by <a href="../../people-2/calvin-schmidt/index.html" title="WordPress">
-                    Calvin Schmidt</a>
-        </div><!-- end .powered -->
-        
-    </div><!-- end of col-940 -->
-    </div><!-- end #footer-wrapper -->
-    
-</div><!-- end #footer -->
-
-<script type='text/javascript' src='../../wp-content/themes/responsive/js/responsive-scriptsf488.js?ver=1.1.0'></script>
-<script type='text/javascript' src='../../wp-content/themes/responsive/js/responsive-pluginsf488.js?ver=1.1.0'></script>
+<!-- Footer -->
+    <footer>
+        <p>&copy; The Biodesign Lab. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 14px;">sth inspiring</p>
+    </footer>
 </body>
-
-<!-- Mirrored from localhost/wordpress/people-2/calvin-schmidt/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 31 May 2012 20:59:42 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 </html>
