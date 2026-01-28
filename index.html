@@ -1,223 +1,429 @@
-<!doctype html>
-<!--[if lt IE 7 ]> <html class="no-js ie6" dir="ltr" lang="en-US"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" dir="ltr" lang="en-US"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" dir="ltr" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" dir="ltr" lang="en-US"> <!--<![endif]-->
-
-<!-- Mirrored from localhost/wordpress/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 31 May 2012 20:53:24 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script type="text/javascript">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodesign Lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-33052601-1']);
-  _gaq.push(['_trackPageview']);
+        :root {
+            --primary-blue: #0066cc;
+            --dark-blue: #003d99;
+            --light-blue: #e6f0ff;
+            --accent-blue: #0099ff;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+            --shadow-hover: 0 8px 24px rgba(0, 102, 204, 0.25);
+        }
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
 
-</script>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        /* Modern Navigation Bar */
+        nav {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
 
-<title>The Bennett Lab</title>
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
 
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="xmlrpc.php" />
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-<link href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-<link rel="alternate" type="application/rss+xml" title="Bennettlab &raquo; Feed" href="feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title="Bennettlab &raquo; Comments Feed" href="comments/feed/index.html" />
-<link rel='stylesheet' id='responsive-style-css'  href='wp-content/themes/responsive/style1576.css?ver=1.2.1' type='text/css' media='all' />
-<script type='text/javascript' src='wp-includes/js/jquery/jquery4735.js?ver=1.7.1'></script>
-<script type='text/javascript' src='wp-content/themes/responsive/js/responsive-modernizr91ee.js?ver=2.5.3'></script>
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 3.3.2" />
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-<!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Muli:light' rel='stylesheet' type='text/css' /><link href='http://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet' type='text/css' />
-<style type="text/css" media="screen">
-p 					{ font-family: 'Muli', arial, serif; } 
- h1 { font-family: 'Didact Gothic', arial, serif; } 
-h2 { font-family: 'Didact Gothic', arial, serif; } 
-h3 { font-family: 'Didact Gothic', arial, serif; } 
-h4 { font-family: 'Didact Gothic', arial, serif; } 
-h5 { font-family: 'Didact Gothic', arial, serif; } 
-h6 { font-family: 'Didact Gothic', arial, serif; } 
-body 				{ font-family: 'Didact Gothic', arial, serif; } 
-blockquote 	{ font-family: 'Didact Gothic', arial, serif; } 
-     
-</style>
-<!-- fonts delivered by Wordpress Google Fonts CHANGE HERE LINUX, a plugin by Adrian3.com -->
+        .logo::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-blue);
+            border-radius: 50%;
+            display: inline-block;
+        }
 
-<!-- We need this for debugging -->
-<meta name="template" content="Responsive 1.5.0" />
-<style type="text/css">
-body.custom-background { background-color: #fff; }
-</style>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-blue);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .header-section {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+            color: var(--primary-blue);
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--light-blue);
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Research Overview */
+        .research-overview {
+            background: linear-gradient(135deg, var(--light-blue) 0%, rgba(0, 153, 255, 0.05) 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+        }
+
+        .research-overview p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--text-dark);
+        }
+
+        /* Grid Layout for Content */
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 2px solid var(--light-blue);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.08);
+        }
+
+        .card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card h3 {
+            color: var(--primary-blue);
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Button Styles */
+        button, .btn {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        button:hover, .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        button:active, .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 25px;
+            color: var(--text-light);
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--dark-blue);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            box-shadow: 0 -4px 12px rgba(0, 102, 204, 0.1);
+        }
+
+        footer p {
+            color: var(--white);
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                height: 60px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 40px 15px;
+            }
+
+            .research-overview {
+                padding: 25px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .grid-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .nav-container {
+                padding: 0 10px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
+<body>
+    <!-- Modern Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-image">
+                    <img src="wp-content/uploads/2012/05/cropped-Logo.jpg" width="300" height="100" alt="Bennettlab">
+                </div>
+                <span>The Biodesign Lab</span>
+            </a>
+            <ul>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="people-2/index.html">People</a></li>
+                <li><a href="publications/index.html">Publications</a></li>
+                <li><a href="https://wiki.rice.edu/confluence/display/BIODESIGN/Home">Lab wiki</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<body class="home blog custom-background">
-                 
-<div id="container" class="hfeed">
-         
-        <div id="header">
-    
-       
-        
-       
-	               
-        <div id="logo">
-            <a href="index.html"><img src="wp-content/uploads/2012/05/cropped-Logo.jpg" width="300" height="100" alt="Bennettlab" /></a>
-        </div><!-- end of #logo -->
-        
-    <ul class="menu"><li class="current_page_item"><a href="index.html" title="Home">Home</a></li><li class="page_item page-item-162"><a href="news/index.html">News</a></li><li class="page_item page-item-67"><a href="research/index.html">Research</a></li><li class="page_item page-item-79"><a href="people-2/index.html">People</a></li><li class="page_item page-item-150"><a href="publications/index.html">Publications</a></li><li class="page_item page-item-152"><a href="https://wiki.rice.edu/confluence/display/BIODESIGN/Home">Lab wiki</a></li></ul>
-				
+    <div class="container">
+        <!-- Lab Group Picture Section -->
+        <div class="header-section" style="text-align: center; margin-bottom: 40px;">
+            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--light-blue) 0%, rgba(0, 153, 255, 0.1) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; border: 2px dashed var(--primary-blue);">
+                <img id="labGroupImage" src="./BennettLab_Merged2.JPG" alt="" title="lab_photo_2018" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            </div>
+            <h1 style="text-align: center;">The Biodesign Lab</h1>
+            <p style="font-size: 18px; color: var(--primary-blue); font-weight: 500; text-align: center;">Some keywords</p>
+        </div>
 
-             
-    </div><!-- end of #header -->
-        
-	    <div id="wrapper" class="clearfix">
-    
-        <div id="featured" class="grid col-940">
-        
-        <div class="grid col-460">
-
-            <h1 class="featured-title">The Biodesign Lab</h1>
-            <h2 class="featured-subtitle">Rice University, Keck 301</h2>            
+        <!-- Research Overview -->
+        <div class="research-overview" id="research">
+            <h2>Our Research Focus</h2>
             <p>Our research spans the boundary between theoretical and experimental synthetic biology. We use an interdisciplinary approach to 1) uncover the underlying design principles governing gene networks and microbial consortia, 2) develop new mathematical tools to better describe gene networks, and 3) engineer novel synthetic gene circuits for environmental and medical applications.</p>
-            		         
-            <div class="call-to-action">
+            <!-- <p>Our research spans the boundary between theoretical and experimental synthetic biology. We use an interdisciplinary approach to:</p>
+            <ul>
+                <li><strong>Uncover design principles</strong> - Governing gene networks and microbial consortia</li>
+                <li><strong>Develop mathematical tools</strong> - To better describe gene networks and their behavior</li>
+                <li><strong>Engineer synthetic circuits</strong> - For environmental and medical applications</li>
+            </ul> -->
+        </div>
 
-            <a href="Postdoctoral_Positions_Bennett_lab.pdf" class="blue button">Postdoctoral positions available</a>
-            
-            </div><!-- end of .call-to-action -->
-                     
-            
-        </div><!-- end of .col-460 -->
+        <!-- Research Areas Grid -->
+        <h2>Research Areas</h2>
+        <div class="grid-section">
+            <div class="card">
+                <h3>key1</h3>
+                <p>sth</p>
+            </div>
+            <div class="card">
+                <h3>key2</h3>
+                <p>sth</p>
+            </div>
+            <div class="card">
+                <h3>key3</h3>
+                <p>sth</p>
+            </div>
+        </div>
 
-        <div id="featured-image" class="grid col-460 fit"> 
-                           
-            <a href="people-2/index.html"><img src="./BennettLab_Merged2.JPG" alt="" title="lab_photo_2018" width="1200" height="636" class="alignright size-full wp-image-198" /></a>
-                                   
-        </div><!-- end of #featured-image --> 
-        
-        </div><!-- end of #featured -->
-               
+        <!-- About Section -->
+        <div id="about">
+            <h2>About sth</h2>
+            <p> about sections </p>
+            <!-- <p>Synthetic biology represents a paradigm shift in how we approach biological engineering. By combining principles from engineering with biological knowledge, we can create novel solutions to complex challenges in medicine, environment, and industry.</p>
+            <p>Our interdisciplinary team brings together expertise in:</p>
+            <ul>
+                <li>Molecular & Systems Biology</li>
+                <li>Mathematical Modeling</li>
+                <li>Computational Biology</li>
+                <li>Chemical Engineering</li>
+                <li>Biomedical Engineering</li>
+            </ul> -->
+        </div>
 
+        <!-- CTA Button -->
+        <!-- <div style="margin-top: 50px; text-align: center;">
+            <button>Get in Touch</button>
+        </div> -->
+    </div>
 
-    <div id="widgets" class="home-widgets">
-        <div class="grid col-300">
-                    
-            <div id="text-2" class="widget-wrapper widget_text"><div id="widget-title-one" class="widget-title-home"><h3>Recent News</h3></div>			<div class="textwidget">
-<p><strong>9.20.2021</strong><br />
-<a href="https://events.rice.edu/#!view/event/event_id/234797">Dr Bennett, Dr Chappell and Dr. Silberg present synbio research at Rice Science Cafe in the newly built innovation hub! </a>
-<p><strong>9.20.2021</strong><br />
-Grant backs effort to build useful bacterial colonies. <a href="https://news2.rice.edu/2021/09/20/grant-backs-effort-to-build-useful-bacterial-colonies-2/">Article.</a>
-<p><strong>10.14.2019</strong><br />
-Synthetic cells make long-distance calls. <a href="https://news2.rice.edu/2019/10/14/synthetic-cells-make-long-distance-calls-2/">Article.</a>
-<p><strong>8.12.2019</strong><br />
-Bacteria made to mimic cells, form communities. <a href="https://news2.rice.edu/2019/08/12/bacteria-made-to-mimic-cells-form-communities-2/">Article.</a>
-<p><strong>8.14.2018</strong><br />
-Models give synthetic biologists a head start. <a href="https://news2.rice.edu/2018/08/14/models-give-synthetic-biologists-a-head-start/">Article.</a>
-<p><strong>1.11.2018</strong><br />
-Rice U. biologists create toolkit for tuning genetic circuits. <a href="http://news.rice.edu/2018/01/11/rice-u-biologists-create-toolkit-for-tuning-genetic-circuits/">Article.</a>
-<p><strong>7.21.2017</strong><br />
-Our lab receieves new funding to investigate synthetic microbial consortia: <a href="http://news.rice.edu/2017/07/20/scientists-seek-to-engineer-chatter-among-cells-2/">Scientists seek to engineer chatter among cells.</a>
-<p><strong>4.10.2017</strong><br />
-<a href="https://anglejournal.com/article/2017-04-the-logic-of-synthetic-biology-turning-cells-into-computers/">The logic of synthetic biology: turning cells into computers.</a>.<br />
-</div>
-		</div>
-                </div><!-- end of .col-300 -->
-
-        <div class="grid col-300">
-                    
-			<div id="widget_tribe_widget_builder_60-2" class="widget-wrapper widget_tribe_widget_builder_60"><div id="widget-title-two" class="widget-title-home"><h3>People</h3></div><p>
-                <a href="http://biochem.rice.edu/facultydetail.aspx?riceid=526587"><img class="wp-image-107 aligncenter" title="Prof. Matthew Bennett" src="people-2/matt-bennett/Matt.jpg" alt="" width="86" height="86" /></a><a href="http://www.math.uh.edu/~josic/"><img src="people-2/kreso-josic/kreso.jpg" alt="" title="Prof. Krešimir Josić" width="86" height="86" class="aligncenter size-full wp-image-334" /></a><a href="http://www.math.uh.edu/~ott/"><img src="people-2/will-ott/will.jpg" alt="" title="Prof. William Ott" width="86" height="86" class="aligncenter size-full wp-image-334" /></a>
-                
-                
-                <a href="people-2/index.html"><img class="aligncenter size-full wp-image-235" title="" src="people-2/corwin-miller/corwin.jpg" alt="" width="86" height="86" /></a><a href="people-2/andrew-hirning/index.html"><img src="wp-content/uploads/2012/05/andrewhead1.jpg" alt="" title="Andrew Hirning" width="86" height="86" class="aligncenter size-full wp-image-283" /></a><a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/joanne-ho/joanne.jpg" alt="" width="86" height="86" /></a>
-                
-                <a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/bhargav/Bhargav.jpg" alt="" width="86" height="86" /></a><a href="people-2/index.html"><img class="aligncenter size-full wp-image-235" title="" src="people-2/mehdi-sadeghpour/Mehdi.jpg" alt="" width="86" height="86" /></a><a href="people-2/david-shis/index.html"><img src="wp-content/uploads/2012/05/Davidhead.jpg" alt="" title="David Shis" width="86" height="86" class="aligncenter size-full wp-image-232" /></a>
-                
-                <a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/razan-alnahhas/Razan.jpg" alt="" width="86" height="86" /></a><a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/shyam-bhakta/shyam.jpg" alt="" width="86" height="86" /></a><a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/jennifer-dou/jennifer.jpg" alt="" width="86" height="86" /></ a>
-                
-                <a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/barbara/Barbara.jpeg" alt="" width="86" height="86" /></a><a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/baiyang-liu/Baiyang.jpg" alt="" width="86" height="86" /></a><a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/sara-molinari/sara.jpg" alt="" width="86" height="86" /></ a>
-                
-                <a href="people-2/index.html"><img class="aligncenter size-full wp-image-269" title="" src="people-2/david-zong/david.jpg" alt="" width="86" height="86" /></a></p></div>
-                
-                </div><!-- end of .col-300 -->
-        <div class="grid col-300 fit">
-                    
-			<div id="text-4" class="widget-wrapper widget_text"><div id="widget-title-three" class="widget-title-home"><h3>Recent Publications</h3></div>			<div class="textwidget">
-<p>
-Zong DM, Sadeghpour M, Molinari S, Alnahhas RN, Hirning AJ, Ott W, Josić K & Bennett MR, “Predictable tuning of synthetic microbial consortium pulse generator dynamics.”<em>Submitted (2021).</em> <br /> 
-<br />
-JMiller CA, Ho JML, Parks S & Bennett MR, “Macrolide biosensor optimization through cellular substrate sequestration.”<em>ACS Synth Biol </em> <strong>10</strong>, 258-264 (2021). <br /> 
-<br />
-Ho JML, Miller CA, Mattia JR & Bennett MR, “Improved pyrrolysine biosynthesis through continuous directed evolution of the complete pathway.” <em> Nat Comm(2020)</em> <strong>12</strong>, 3914 (2021).<br /> 
-<br /> 
-Alnahhas RN, Sadeghpour M, Chen Y, Frey A, Ott W, Josić J & Bennett MR, “Majority sensing in synthetic microbial consortia.”<em>Nature Comm</em> <strong>11</strong>, 3659 (2020).[<a href="https://www.nature.com/articles/s41467-020-17475-z#:~:text=Abstract,microbial%20consortia%20becomes%20increasingly%20beneficial.&text=Here%20we%20develop%20a%20two,strain%20is%20in%20the%20majority.">PDF</a>]<br /> 
-<br />
-Winkle JJ, Karamched BR, Bennett MR, Ott W & Josić K, “Emergent spatiotemporal population dynamics with cell-length control of synthetic microbial consortia,” <em>PLOS Comp Biol</em> <strong>9</strong>, e1009381 (2021).<br /> 
-<br />
-Ho JML, Miller CA, Parks S, Mattia J & Bennett MR, “A suppressor tRNA-mediated feedforward loop eliminates leaky gene expression in bacteria.” <em>Nucl Acids Res (2020)</em> [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7969014/">PDF</a>]<br />
-<br /><br />
-</div>
-		</div>            
-                </div><!-- end of .col-300 fit -->
-    </div><!-- end of #widgets -->    </div><!-- end of #wrapper -->
-    </div><!-- end of #container -->
-
-<center>
-<a class="twitter-timeline" href="https://twitter.com/biodesign_lab" data-widget-id="719545497338273792">Tweets by @biodesign_lab</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</center>
-
-<div id="footer" class="clearfix">
-
-    <div id="footer-wrapper">
-    
-    <div class="grid col-940">
-    
-        <div class="grid col-620">
-		         </div><!-- end of col-620 -->
-         
-         <div class="grid col-300 fit">
-         <ul class="social-icons"></ul><!-- end of .social-icons -->         </div><!-- end of col-300 fit -->
-                
-        <div class="grid col-300 copyright">
-            &copy; 2012<a href="index.html" title="Bennettlab">
-                Bennettlab</a><br />
-            <a href="https://wiki.rice.edu/confluence/display/BIODESIGN/Home">Lab Wiki</a>
-        </div><!-- end of .copyright -->
-        
-        <div class="grid col-300 scroll-top"><a href="#scroll-top" title="scroll to top">&uarr;</a></div>
-        
-        <div class="grid col-300 fit powered">
-            <a href="http://themeid.com/responsive-theme/" title="Responsive Theme">
-                    Responsive Theme</a>
-            powered by <a href="http://wordpress.org/" title="WordPress">
-                    WordPress</a><br/>
-			Designed and maintained by <a href="people-2/calvin-schmidt/index.html" title="WordPress">
-                    Calvin Schmidt</a>
-        </div><!-- end .powered -->
-        
-    </div><!-- end of col-940 -->
-    </div><!-- end #footer-wrapper -->
-    
-</div><!-- end #footer -->
-
-<script type='text/javascript' src='wp-content/themes/responsive/js/responsive-scriptsf488.js?ver=1.1.0'></script>
-<script type='text/javascript' src='wp-content/themes/responsive/js/responsive-pluginsf488.js?ver=1.1.0'></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; The Biodesign Lab. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 14px;">sth inspiring</p>
+    </footer>
 </body>
-
-<!-- Mirrored from localhost/wordpress/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 31 May 2012 20:54:56 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 </html>
