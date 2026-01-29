@@ -24,11 +24,30 @@
         }
 
         body {
+      		margin: 0;
+      		padding: 0;
+      		width: 100%;
+      		height: 100%;
+      		overflow-x: hidden;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text-dark);
             background-color: var(--white);
             line-height: 1.6;
         }
+      
+      video-containter{
+      		width: 100%;
+  			/* Optional: Set a specific height if you want the container to fill the screen vertically */
+  			/* height: 100vh; */
+  			position: relative;
+  			overflow: hidden;
+		}
+      
+      #video-background {
+  			width: 100%; /* Makes the video span the full width of its container */
+ 			 height: auto; /* Maintains the video's aspect ratio */
+  			display: block; /* Removes any default inline-block spacing */
+		}
 
         /* Modern Navigation Bar */
         nav {
@@ -68,11 +87,11 @@
         }
 
         .logo-image {
-            width: 300px;
-            height: 100px;
-            border-radius: 10%;
+            width: 200px;
+            height: 50px;
+            border-radius: 0%;
             background-color: var(--accent-blue);
-            display: flex;
+            display: left;
             align-items: center;
             justify-content: center;
             overflow: hidden;
@@ -85,7 +104,7 @@
         }
 
         .logo::before {
-            content: '';
+            content: ;
             width: 8px;
             height: 8px;
             background-color: var(--accent-blue);
@@ -338,6 +357,9 @@
                 font-size: 12px;
             }
         }
+      
+      
+      
     </style>
 </head>
 <body>
@@ -362,17 +384,19 @@
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Lab Group Picture Section -->
-        <div class="header-section" style="text-align: center; margin-bottom: 40px;">
-            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--light-blue) 0%, rgba(0, 153, 255, 0.1) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; border: 2px dashed var(--primary-blue);">
-                <p>Add video</p>
-                <!-- <img id="labGroupImage" src="./BennettLab_Merged2.JPG" alt="" title="lab_photo_2018" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"> -->
-            </div>
-            <h1 style="text-align: center;">The Biodesign Lab</h1>
-            <p style="font-size: 18px; color: var(--primary-blue); font-weight: 500; text-align: center;">Some keywords</p>
-        </div>
-
+  
+      <div class="video-container">
+                  <video autoplay muted loop id="video-background">
+                    <source src="webpage_video.m4v" type="video/mp4">
+                    <!-- Optional: Add fallback text or images for older browsers -->
+                    Your browser does not support the video tag.
+                  </video>
+      </div>
+            
+            <!-- <p style="font-size: 18px; color: var(--primary-blue); font-weight: 500; text-align: center;">Some keywords</p> -->
+     
+        <h1 style="text-align: center;margin-bottom: 40px;">The Biodesign Lab</h1>
+    
         <!-- Research Overview -->
         <div class="research-overview" id="research">
             <h2>Our Research Focus</h2>
@@ -390,7 +414,7 @@
         <div class="grid-section">
             <div class="card">
                 <h3>Multicellular synthetic biology</h3>
-                <p>sth</p>
+                <p>We are studying the emergent properties of living systems composed of multiple interacting cell types. We are discovering new mechanisms for coordinating dynamic gene expression across lengthscales, creating periodic spatial patterns and sensing and maintaining cell type ratios.</p>
             </div>
             <div class="card">
                 <h3>Mimicking eukaryotic developmental processes in bacteria</h3>
@@ -399,8 +423,8 @@
         </div>
         <div class="grid-section">
             <div class="card">
-                <h3>key3</h3>
-                <p>sth</p>
+                <h3>Developing tools for robust cellular control</h3>
+                <p>Collective behaviors require cells to be able to accurately sense their environment and make decisions despite external perturbations and intracellular noise. We are developing systems for improved environmental sensing, multi-input signal integration and robust adaptation to environmental perturbations.</p>
             </div>
             <div class="card">
                 <h3>Understanding the mathematics of cells</h3>
@@ -409,7 +433,7 @@
         </div>
 
         <!-- About Section -->
-        <div id="about">
+        <!--<div id="about">
             <h2>About sth</h2>
             <p> about sections </p>
             <!-- <p>Synthetic biology represents a paradigm shift in how we approach biological engineering. By combining principles from engineering with biological knowledge, we can create novel solutions to complex challenges in medicine, environment, and industry.</p>
@@ -421,7 +445,7 @@
                 <li>Chemical Engineering</li>
                 <li>Biomedical Engineering</li>
             </ul> -->
-        </div>
+        <!--</div>
 
         <!-- CTA Button -->
         <!-- <div style="margin-top: 50px; text-align: center;">
@@ -431,8 +455,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; The Biodesign Lab. All rights reserved.</p>
-        <p style="margin-top: 10px; font-size: 14px;">sth inspiring</p>
+        <p>&copy; The Biodesign Lab. Rice University.</p>
+        <!--<p style="margin-top: 10px; font-size: 14px;">sth inspiring</p> -->
     </footer>
 </body>
 </html>
