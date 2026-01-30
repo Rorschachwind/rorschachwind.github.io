@@ -167,11 +167,24 @@
             border-left: 5px solid var(--primary-blue);
             box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
             transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
         }
 
         .team-member:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-hover);
+        }
+
+        .team-member img {
+            flex-shrink: 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15);
+        }
+
+        .team-member-info {
+            flex: 1;
         }
 
         .team-member strong {
@@ -335,7 +348,6 @@
 
         <div class="header-section" style="text-align: center; margin-bottom: 40px;">
             <div>
-                <!-- style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--light-blue) 0%, rgba(0, 153, 255, 0.1) 100%); border-radius: 0px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; border: 2px dashed var(--primary-blue);"> -->
                 <img id="labGroupImage" src="../BennettLab_Merged2.JPG" alt="" title="lab_photo_2018" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
             </div>
         
@@ -345,47 +357,54 @@
         <div class="team-section">
             <h2 id="team">Principal Investigator</h2>
             <div class="team-member">
-                <a title="Matthew R. Bennett" href="https://profiles.rice.edu/faculty/matthew-bennett"><strong>Matthew R. Bennett, PhD</strong>
                 <img class="size-thumbnail wp-image-80" title="" src="matt-bennett/Matt.jpg" alt="" width="150" height="150" />
-                <!-- <img class="alignright size-thumbnail wp-image-80" title="" src="matt-bennett/Matt.jpg" alt="" width="150" height="150" /> -->
-                <p>Email: matthew.bennett [at] rice.edu</p>
-                <p>Phone: +1 713.348.4161</p>
-                <p>Office: Keck 306</p>
-                <p><strong>Mailing Address:</strong><br>
-                Rice University MS-140<br>
-                6100 Main St.<br>
-                Houston, TX, 77005, USA</p>
+                <div class="team-member-info">
+                    <a title="Matthew R. Bennett" href="https://profiles.rice.edu/faculty/matthew-bennett"><strong>Matthew R. Bennett, PhD</strong></a>
+                    <p>Email: matthew.bennett [at] rice.edu</p>
+                    <p>Phone: +1 713.348.4161</p>
+                    <p>Office: Keck 306</p>
+                  </div>
+                  <div class="team-member-info">
+                      <strong>Mailing Address:</strong>
+                      Rice University MS-140<br>
+                      6100 Main St.<br>
+                      Houston, TX, 77005, USA</p>
+              </div>
+                
             </div>
         </div>
 
         <!-- Collaborators -->
         <div class="team-section">
             <h2>Collaborators</h2>
-            <div class="team-member">
-                
-                <a title="Krešimir Josić" href="http://www.math.uh.edu/~josic/"><strong>Krešimir Josić, PhD</strong></a><img class="alignright size-thumbnail wp-image-80" title="" src="kreso-josic/kreso.jpg" alt="" width="150" height="150" />
+            <div class="team-member">               
+              <img class="alignright size-thumbnail wp-image-80" title="" src="kreso-josic/kreso.jpg" alt="" width="150" height="150" />
+              <div class = "team-member-info">
+                <a title="Krešimir Josić" href="http://www.math.uh.edu/~josic/"><strong>Krešimir Josić, PhD</strong></a>
                 <p>Professor, University of Houston</p>
                 <p>Email: josic [at] math.uh.edu</p>
-            </div>
-            <!-- <div class="team-member">
+              </div>
                 
-                <a title="William Ott" href="http://www.math.uh.edu/~ott/"><strong>William Ott, PhD</strong></a><img class="alignright size-thumbnail wp-image-80" title="" src="will-ott/will.jpg" alt="" width="150" height="150" />
-                <p>University of Houston</p>
-                <p>Email: ott [at] math.uh.edu</p>
-            </div> -->
+            </div>
+
         </div>
 
         <!-- Postdoc -->
         <div class="team-section">
             <h2>Postdoctoral Researcher</h2>
             <div class="team-member">
-                <strong>Amanda Alexander</strong>
-                <img class="alignleft size-full wp-image-269" title="" src="amanda.jpeg" alt="" width="97" height="97" />
+                <img class="size-full wp-image-269" title="" src="amanda.jpeg" alt="" width="97" height="97" />
+                <div class="team-member-info">
+                    <strong>Amanda Alexander</strong>
+                  	<p>Email: aa225 [at] rice.edu</p>
+                </div>
             </div>
             <div class="team-member">
-                <strong>Shyam Bhakta</strong>
-                <img class="alignleft size-full wp-image-269" title="" src="shyam-bhakta/shyam.jpg" alt="" width="97" height="97" />
-                <p>Email: shyam.bhakta [at] rice.edu</p>
+                <img class="size-full wp-image-269" title="" src="shyam-bhakta/shyam.jpg" alt="" width="97" height="97" />
+                <div class="team-member-info">
+                    <strong>Shyam Bhakta</strong>
+                    <p>Email: shyam.bhakta [at] rice.edu</p>
+                </div>
             </div>
         </div>
 
@@ -394,52 +413,58 @@
             <h2>Graduate Students</h2>
             
             <div class="team-member">
-                <strong>Xiao Peng</strong>
-                <img class="alignleft size-full wp-image-270" title="" src="xiao.png" alt="" width="97" height="97" />
-                <p>Email: xp6 [at] rice.edu</p>
+                <img class="size-full wp-image-270" title="" src="xiao.png" alt="" width="97" height="97" />
+                <div class="team-member-info">
+                    <strong>Xiao Peng</strong>
+                    <p>Email: xp6 [at] rice.edu</p>
+                </div>
             </div>
             
             <div class="team-member">
-                <strong>Charis Giannitsis</strong>
-                <img class="alignleft size-full wp-image-270" title="" src="charis.jpg" alt="" width="97" height="97" />
-                <p>Email: cg56 [at] rice.edu</p>
+                <img class="size-full wp-image-270" title="" src="charis.jpg" alt="" width="97" height="97" />
+                <div class="team-member-info">
+                    <strong>Charis Giannitsis</strong>
+                    <p>Email: cg56 [at] rice.edu</p>
+                </div>
             </div>
             <div class="team-member">
-                <strong>Camilo Rodriguez Cortes</strong>
-                <!-- <img class="alignleft size-full wp-image-270" title="" src="charis.png" alt="" width="97" height="97" /> -->
-                <p>Email: cr85 [at] rice.edu</p>
+                <div class="team-member-info">
+                    <strong>Camilo Rodriguez Cortes</strong>
+                    <p>Email: cr85 [at] rice.edu</p>
+                </div>
             </div>
             <div class="team-member">
-                <strong>Kadena Weaver</strong>
-                <img class="alignleft size-full wp-image-270" title="" src="Kadena.jpg" alt="" width="97" height="97" />
-                <!-- <img class="alignleft size-full wp-image-270" title="" src="charis.png" alt="" width="97" height="97" /> -->
-                <p>Email: kc210 [at] rice.edu</p>
+                <img class="size-full wp-image-270" title="" src="Kadena.jpg" alt="" width="97" height="97" />
+                <div class="team-member-info">
+                    <strong>Kadena Weaver</strong>
+                    <p>Email: kc210 [at] rice.edu</p>
+                </div>
             </div>
             <div class="team-member">
-                <strong>Aadarsh Raghunathan</strong>
-                <!-- <img class="alignleft size-full wp-image-270" title="" src="charis.png" alt="" width="97" height="97" /> -->
-                <p>Email: ar301 [at] rice.edu</p>
+                <div class="team-member-info">
+                    <strong>Aadarsh Raghunathan</strong>
+                    <p>Email: ar301 [at] rice.edu</p>
+                </div>
             </div>
         </div>
 
         <!-- Undergraduates -->
         <div class="team-section">
             <h2>Undergraduate Researchers</h2>
-            <div class="team-member">
-                <strong>Zoe Gupton</strong>
-                <strong>Rebekah Bryant</strong>
-                <strong>Joseph Essman</strong>
-                <strong>Jacob Mattia</strong>
-                <strong>Madeline Ngo</strong>
-                <strong>Sydney Parks</strong>
-                <strong>Moriah Wilson</strong>
-            </div>
+                <strong>Zoe Gupton</strong><p></p>
+                <strong>Rebekah Bryant</strong><p></p>
+                <strong>Joseph Essman</strong><p></p>
+                <strong>Jacob Mattia</strong><p></p>
+                <strong>Madeline Ngo</strong> <p></p>
+                <strong>Sydney Parks</strong><p></p>
+                <strong>Moriah Wilson</strong><p></p>
+     
         </div>
 
         <!-- Alumni -->
         <div class="team-section">
             <h2>Alumni</h2>
-            <div class="team-member">
+            <!<div class="team-member">
                 <strong>Meidi Wang</strong>
                 <p>Postdoctoral researcher, Oak Ridge National Lab</p>
 
@@ -460,24 +485,8 @@
 
                 <strong>Ye Chen</strong>
                 <p>Professor, Shenzhen Institutes of Advanced Technology</p>
-
-                <strong>Adam Atanas</strong>
-
-                <strong>Yu-Yu Cheng</strong>
-
-                <strong>Chinmaya Gupta</strong>
-
-                <strong>Faiza Hussain</strong>
-
-                <strong>Truong Nguyen</strong>
-
-                <strong>Erin O'Brien Gilbert</strong>
-
-                <strong>Calvin Schmidt</strong>
-
-                <strong>Elizabeth Van Itallie</strong>
-
-                <strong>David Shis</strong>
+          
+          		<strong>David Shis</strong>
                 <p>TeraPore Technology</p>
 
                 <strong>Yanfen Bai</strong>
@@ -493,10 +502,10 @@
                 <p>Assistant Professor, University of Maryland</p>
 
                 <strong>Andrew Hirning</strong>
-                <p>Nikon</p>
+                <p>Nikon Instruments</p>
 
                 <strong>Razan Alnahhas</strong>
-                <p>Postdoc, Boston University</p>
+                <p>Assistant Director of Academic Programs, Cold Spring Harbor Laboratory</p>
 
                 <strong>David Zong</strong>
                 <p>Novome Biotechnology</p>
@@ -515,13 +524,30 @@
                 <p>Senior Scientist, Metagenomi</p>
 
                 <strong>Baiyang Liu</strong>
-                <p>Postdoc, Rice University</p>
+                <p>Postdoc, Columbia University</p>
 
+                <strong>Adam Atanas</strong>
+				<p></p>
+                <strong>Yu-Yu Cheng</strong>
+				<p></p>	
+                <strong>Chinmaya Gupta</strong>
+				<p></p>
+                <strong>Faiza Hussain</strong>
+				<p></p>
+                <strong>Truong Nguyen</strong>
+				<p></p>
+                <strong>Erin O'Brien Gilbert</strong>
+				<p></p>
+                <strong>Calvin Schmidt</strong>
+				<p></p>
+                <strong>Elizabeth Van Itallie</strong>
+
+               
             </div>
            
            
         </div>
-    </div>
+
 
     <!-- Footer -->
     <footer>
