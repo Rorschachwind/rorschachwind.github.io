@@ -42,6 +42,16 @@
 		  	align-items: center;
   			position: flex;
   			overflow: hidden;
+		  	margin: 0 auto;
+		}
+
+		video-container video {
+		    /* Ensure the video fills the container while maintaining its aspect ratio */
+		    width: 250%; 
+		    height: 250%;
+		    object-fit: cover; 
+		    /* Position the center of the video at the center of the container (this is the default behavior) */
+		    object-position: center center; 
 		}
       
       #video-background {
